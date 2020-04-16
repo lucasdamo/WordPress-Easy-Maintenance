@@ -1,0 +1,122 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+.headerlogo{
+	font-family: arial;
+	color: white;
+	font-size: 25px;
+	padding: 0.4em;
+	float: left;
+}
+
+#embreve {
+	color: #707070;
+	font-style: italic;
+}
+
+.wrapper {
+	display: grid;
+	grid-template-columns: 33% 34% 33%;
+	grid-template-areas: 
+		"header header header"
+		"body-l body-c body-r"
+		"contact contact contact";
+	margin: 0px;
+	padding: 0px;
+	bottom: 20px;
+	background-color: white;
+}
+
+body {
+    height: 100vh;
+    background-color: white;
+}
+
+.box {
+	padding: 0px;
+}
+
+.info {
+	border-style: 
+}
+
+.left {
+	grid-area: body-l;
+}
+
+.right {
+	grid-area: body-r;
+}
+
+.center {
+	grid-area: body-c;
+}
+
+.contact {
+	padding-top: 100px;
+	grid-area: contact;
+}
+
+.nav-ul {
+	list-style: none;
+	float: right;
+	padding: 20px;
+}
+
+.nav-li {
+	float: left;
+	padding-right: 0.7em;
+}
+
+.nav-li a {
+	text-decoration: none;
+	color: white;
+}
+
+#selected {
+	color: #00704e;
+}
+
+.imagelogo {
+	width: 12.5%;
+	height: auto;
+	margin-left: 10px;
+	/*	height: 12.5%;*/
+	/*	width: 22vh;*/
+}
+
+.banner {
+	max-width: 100%;
+	padding: 0px;
+	margin: 0px;
+	max-height: 200px;
+
+}
+
+.desc {
+	font-size: 27px;
+	color: white;
+	max-height: 100%;
+	font-family: Georgia, serif;
+	font-style: italic;
+}
+
+.bodydesct {
+	font-family: Arial;
+	padding: 10px;
+}
+
+.bodydescp {
+	font-family: Sans-serif;
+}
+
+i {
+	color: #1df9b7;
+}
+
+.icons {
+	padding-top: 30px;
+	padding-bottom: 10px;
+}
