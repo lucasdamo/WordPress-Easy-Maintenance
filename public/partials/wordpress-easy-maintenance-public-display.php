@@ -23,10 +23,10 @@
 </head>
 <body>
 	<div class="main-div">
-		<a class="link" href="<?php echo home_url(add_query_arg(array(),$wp->request)) . '/wp-admin'?>">Login</a>
+		<a class="link" href="<?php echo site_url() . '/wp-login.php'?>">Login</a>
 		<div class="main-box centered">
 			<h1><?php echo esc_attr(get_option('wordpress_easy_maintenance_h1_text')); ?></h1>
-			<h2><?php echo esc_attr(get_option('wordpress_easy_maintenance_h1_text')); ?></h2>
+			<h2><?php echo esc_attr(get_option('wordpress_easy_maintenance_h2_text')); ?></h2>
 		</div>
 	</div>
 

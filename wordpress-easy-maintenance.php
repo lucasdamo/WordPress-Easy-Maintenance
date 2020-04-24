@@ -13,7 +13,7 @@
  * Description:		  	Basic plugin where you can show a different page to users not logged in. Easily to use your own template or personalize the default.
  * Author:			  		Lucas Damo <contact@lucasdamo.com>
  * Author URI:	      https://www.lucasdamo.com/
- * Version:			  		2.1.0
+ * Version:			  		2.1.1
  * License:           MIT
  * License URI:       https://choosealicense.com/licenses/mit/
  * Text Domain:       wordpress-easy-maintenance
@@ -28,28 +28,18 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * Currently plugin version.
  */
-define( 'WORDPRESS_EASY_MAINTENANCE_VERSION', '2.1.0' );
+define( 'WORDPRESS_EASY_MAINTENANCE_VERSION', '2.1.1' );
 
 /**
- * The code that runs during plugin activation.
- * This action is documented in includes/class-plugin-name-activator.php
+ * The code that runs during plugin uninstallation.
+ * This action is documented in uninstall.php
  */
-function activate_wordpress_easy_maintenance() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-wordpress-easy-maintenance-activator.php';
-	Wordpress_Easy_Maintenance_Activator::activate();
+function unistall_wordpress_easy_maintenance(){
+	require_once plugin_dir_path( __FILE__ ) . 'uninstall.php';
+	Wordpress_Easy_Maintenance_Unistaller::uninstall();
 }
 
-/**
- * The code that runs during plugin deactivation.
- * This action is documented in includes/class-plugin-name-deactivator.php
- */
-function deactivate_wordpress_easy_maintenance() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-wordpress-easy-maintenance-deactivator.php';
-	Wordpress_Easy_Maintenance_Deactivator::deactivate();
-}
-
-register_activation_hook( __FILE__, 'activate_wordpress_easy_maintenance' );
-register_deactivation_hook( __FILE__, 'deactivate_wordpress_easy_maintenance' );
+register_uninstall_hook(__FILE__, 'pluginprefix_function_to_run');
 
 /**
  * The core plugin class that is used to define internationalization,

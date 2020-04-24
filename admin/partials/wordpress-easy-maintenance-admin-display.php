@@ -35,20 +35,12 @@
  					<input type="text" name="wordpress_easy_maintenance_page_title" value="<?php echo esc_attr( get_option('wordpress_easy_maintenance_page_title') ); ?>" style="min-width:200px;" />
  				</div>
  				<div>
- 					<label for='wordpress_easy_maintenance_header_hex'> Header Color in Hexadecimal: </label>
- 					<input type="text" name="wordpress_easy_maintenance_header_hex" value="<?php echo esc_attr(get_option('wordpress_easy_maintenance_header_hex')); ?>" style="min-width: 200px;" />
- 				</div>
- 				<div>
- 					<label for='wordpress_easy_maintenance_h1_text'> Text to show up on header: </label>
+ 					<label for='wordpress_easy_maintenance_h1_text'> Primary text: </label>
  					<input type="text" name="wordpress_easy_maintenance_h1_text" value="<?php echo esc_attr(get_option('wordpress_easy_maintenance_h1_text')); ?>" style="min-width: 200px;" />
  				</div>
  				<div>
- 					<label for='wordpress_easy_maintenance_title'> Maintenance title: </label>
- 					<input type='text' name='wordpress_easy_maintenance_title' value="<?php echo esc_attr(get_option('wordpress_easy_maintenance_title')); ?>" style="min-width: 200px;" />
- 				</div>
- 				<div>
- 					<label for='wordpress_easy_maintenance_note'> Maintenance note: </label>
- 					<input type='text' name='wordpress_easy_maintenance_note' value="<?php echo esc_attr(get_option('wordpress_easy_maintenance_note')); ?>" style="min-width: 200px;" />
+ 					<label for='wordpress_easy_maintenance_h2_text'> Secondary text: </label>
+ 					<input type='text' name="wordpress_easy_maintenance_h2_text" value="<?php echo esc_attr(get_option('wordpress_easy_maintenance_h2_text')); ?>" style="min-width: 200px;" />
  				</div>
  			</td>
  		</tr>

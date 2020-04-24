@@ -1,31 +1,51 @@
 <?php
 
 /**
- * Fired when the plugin is uninstalled.
- *
- * When populating this file, consider the following flow
- * of control:
- *
- * - This method should be static
- * - Check if the $_REQUEST content actually is the plugin name
- * - Run an admin referrer check to make sure it goes through authentication
- * - Verify the output of $_GET makes sense
- * - Repeat with other user roles. Best directly by using the links/query string parameters.
- * - Repeat things for multisite. Once for a single site in the network, once sitewide.
- *
- * This file may be updated more in future version of the Boilerplate; however, this is the
- * general skeleton and outline for how the file should work.
- *
- * For more information, see the following discussion:
- * https://github.com/tommcfarlin/WordPress-Plugin-Boilerplate/pull/123#issuecomment-28541913
- *
- * @link       http://example.com
- * @since      1.0.0
- *
- * @package    Plugin_Name
+	* Provide a public-facing view for the plugin
+	*
+	* This file is used to markup the public-facing aspects of the plugin.
+	*
+	* @link       https://github.com/lucasdamo/WordPress-Easy-Maintenance
+	* @since      2.1.1
+	*
+	* @package    Wordpress_Easy_Maintenance
+	* @subpackage Wordpress_Easy_Maintenance/public/partials
+	* @author     Lucas Damo <contact@lucasdamo.com>
+	*
+	* TODO: Documentate
  */
 
-// If uninstall not called from WordPress, then exit.
-if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
-	exit;
+
+
+class Wordpress_Easy_Maintenance_Unistaller {
+
+	public static function check_capabilities(){
+		// If uninstall not called from WordPress, then exit.
+		if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) )
+		 	return False;
+
+		// Important: Check if the file is the one
+		// that was registered during the uninstall hook.
+		if ( __FILE__ !== WP_UNINSTALL_PLUGIN )
+			return False;
+
+		if ( ! current_user_can( 'delete_plugins' ) )
+			return False;
+
+		return True;
+	}
+
+	public static function unregister_settings(){
+		unregister_setting( 'wordpress_easy_maintenance_admin_display', 'wordpress_easy_maintenance_active');
+		unregister_setting( 'wordpress_easy_maintenance_admin_display', 'wordpress_easy_maintenance_page_title');
+		unregister_setting( 'wordpress_easy_maintenance_admin_display', 'wordpress_easy_maintenance_h1_text');
+		unregister_setting( 'wordpress_easy_maintenance_admin_display', 'wordpress_easy_maintenance_h2_text');
+	}
+
+
+	public static function uninstall($request){
+		if (! Wordpress_Easy_Maintenance_Unistaller::check_capabilities())
+			exit;
+		Wordpress_Easy_Maintenance_Unistaller::unregister_settings();
+	}
 }
