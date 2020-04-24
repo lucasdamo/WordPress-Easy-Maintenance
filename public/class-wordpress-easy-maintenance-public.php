@@ -66,7 +66,6 @@ class Wordpress_Easy_Maintenance_Public {
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
-
 		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/wordpress-easy-maintenance-public.css', array(), $this->version, 'all' );
 
 	}
@@ -150,7 +149,12 @@ class Wordpress_Easy_Maintenance_Public {
 	 */
   public function block_user(){
     if(!$this->allow_access()){
-			// require_once dirname( __FILE__ ) . '/css/wordpress-easy-maintenance-public.css';
+
+			// TODO: Study other workarounds to enable other .css to load:
+			$wp_styles = WP_Styles();
+			$this->enqueue_styles();
+			$this->enqueue_scripts();
+			$wp_styles->do_items();
       require_once dirname( __FILE__ ) . '/partials/wordpress-easy-maintenance-public-display.php';
 			die();
     }

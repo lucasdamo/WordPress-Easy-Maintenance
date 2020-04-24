@@ -114,18 +114,14 @@ class Wordpress_Easy_Maintenance_Admin {
     register_setting( 'wordpress_easy_maintenance_admin_display', 'wordpress_easy_maintenance_active', 'strval' );
     register_setting( 'wordpress_easy_maintenance_admin_display', 'wordpress_easy_maintenance_page_title', 'strval' );
     register_setting( 'wordpress_easy_maintenance_admin_display', 'wordpress_easy_maintenance_h1_text', 'strval' );
-    register_setting( 'wordpress_easy_maintenance_admin_display', 'wordpress_easy_maintenance_note', 'strvsal' );
-    register_setting( 'wordpress_easy_maintenance_admin_display', 'wordpress_easy_maintenance_title', 'strval' );
-    register_setting( 'wordpress_easy_maintenance_admin_display', 'wordpress_easy_maintenance_header_hex', 'strval' );
+    register_setting( 'wordpress_easy_maintenance_admin_display', 'wordpress_easy_maintenance_h2_text', 'strvsal' );
 
     /* Set settings' defaults */
 		if (get_option('wordpress_easy_maintenance_active') == '' ) {
 	    update_option('wordpress_easy_maintenance_active', 'disabled');
 	    update_option('wordpress_easy_maintenance_page_title', 'Page Title');
-	    update_option('wordpress_easy_maintenance_h1_text', 'Main Text');
-	    update_option('wordpress_easy_maintenance_note', 'Note');
-	    update_option('wordpress_easy_maintenance_title', 'Title');
-	    update_option('wordpress_easy_maintenance_header_hex', '#8a8a8a');
+	    update_option('wordpress_easy_maintenance_h1_text', 'Primary Text');
+			update_option('wordpress_easy_maintenance_h2_text', 'Secondary Text');
 		}
 	}
 

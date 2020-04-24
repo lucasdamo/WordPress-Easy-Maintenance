@@ -1,127 +1,62 @@
-/**
- * All of the CSS for your public-facing functionality should be
- * included in this file.
- */
+. html {
+  width: 100%;
+  height: 100%;
+}
 
- *{
- 	padding: 0px;
- 	margin: 0px;
- }
+.main-div {
+  /* Credits for image: https://pixabay.com/photos/chicago-usa-america-united-states-690364/ */
+  background-image: url("https://cdn.pixabay.com/photo/2015/03/26/09/48/chicago-690364_960_720.jpg");
+  background-repeat: no-repeat;
+  background-blend-mode: lighten;
+  background-clip: content-box;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
 
- .headerlogo{
- 	font-family: arial;
- 	color: white;
- 	font-size: 25px;
- 	padding: 0.4em;
- 	float: left;
- }
+.header {
+  display: none;
+  width: 100%;
+  height: 10%;
+}
 
- #embreve {
- 	color: #707070;
- 	font-style: italic;
- }
+.link {
+  color: black;
+  position:absolute;
+  width:40px;
+  height:40px;
+  padding: 10px;
+  text-align:center;
+}
 
- .wrapper {
- 	display: grid;
- 	grid-template-columns: 33% 34% 33%;
- 	grid-template-areas:
- 		"header header header"
- 		"body-l body-c body-r"
- 		"contact contact contact";
- 	margin: 0px;
- 	padding: 0px;
- 	bottom: 20px;
- 	background-color: white;
- }
+.link:hover {
+  color: black;
+  text-decoration: none;
+}
 
- body {
-     height: 100vh;
-     background-color: white;
- }
+.link:active {
+  color: black;
+  text-decoration: none;
+}
 
- .box {
- 	padding: 0px;
- }
+.link:visited {
+  color: black;
+  text-decoration: none;
+}
 
- .info {
- 	border-style:
- }
+.link:focus{
+  color: black;
+  text-decoration: none;
+}
 
- .left {
- 	grid-area: body-l;
- }
+.main-box h1 {
+  text-align: center;
+}
 
- .right {
- 	grid-area: body-r;
- }
-
- .center {
- 	grid-area: body-c;
- }
-
- .contact {
- 	padding-top: 100px;
- 	grid-area: contact;
- }
-
- .nav-ul {
- 	list-style: none;
- 	float: right;
- 	padding: 20px;
- }
-
- .nav-li {
- 	float: left;
- 	padding-right: 0.7em;
- }
-
- .nav-li a {
- 	text-decoration: none;
- 	color: white;
- }
-
- #selected {
- 	color: #00704e;
- }
-
- .imagelogo {
- 	width: 12.5%;
- 	height: auto;
- 	margin-left: 10px;
- 	/*	height: 12.5%;*/
- 	/*	width: 22vh;*/
- }
-
- .banner {
- 	max-width: 100%;
- 	padding: 0px;
- 	margin: 0px;
- 	max-height: 200px;
-
- }
-
- .desc {
- 	font-size: 27px;
- 	color: white;
- 	max-height: 100%;
- 	font-family: Georgia, serif;
- 	font-style: italic;
- }
-
- .bodydesct {
- 	font-family: Arial;
- 	padding: 10px;
- }
-
- .bodydescp {
- 	font-family: Sans-serif;
- }
-
- i {
- 	color: #1df9b7;
- }
-
- .icons {
- 	padding-top: 30px;
- 	padding-bottom: 10px;
- }
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
