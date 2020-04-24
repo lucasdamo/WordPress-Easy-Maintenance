@@ -1,6 +1,4 @@
 # WordPress Easy Maintenance
-
-## Description
 Easily block visitors from seeing your WordPress Blog, but keeping the admin login page and panel.
 
 ## Why
@@ -11,4 +9,11 @@ so i decided to use the one i have already created. I am also taking the opportu
 and make it open-sourced.
 
 ## Contribute
-It is just a really small project, anyone is more than welcomed to contribute and there is no stablished guidelines to do so. Just open a pull request.
+It is a small project, no rules will be specified for now. The structure is based on the object-oriented foundation https://github.com/DevinVinson/WordPress-Plugin-Boilerplate. If you want to contribute please follow this pattern and open a pull request.
+
+## Todo List
+* Enable whitelisting pages
+* Enable whitelisting roles / rights
+* Improve UI
+* Create timer widget and option for expiritation date
+* Refactoring
