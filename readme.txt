@@ -1,4 +1,4 @@
-=== Easy Maintenance ===
+=== WordPress Easy Maintenance ===
 Contributors: lucasdamo
 Tags: Maintenance, Coming Soon, easy, free, basic, minimal
 Requires at least: 4.0
@@ -13,9 +13,8 @@ Contribute! https://github.com/lucasdamo/WordPress-Easy-Maintenance
 
 = Features: =
 - Easily enable/disable
-- Easily change header color and text
 - Easily change body text
-- You can use your own template and design by modifying maintenance-userpage.php and userpage.css
+- You can use your own template and design
 
 
 == Installation ==
@@ -26,19 +25,24 @@ Contribute! https://github.com/lucasdamo/WordPress-Easy-Maintenance
 5. Activate "Easy Minimal Maintenance".
 6. To change settings go to Settings > Maintenance.
 
-== Screenshots ==
-screenshot-1.png
-
 == Frequently Asked Questions ==
 
 = How to Use ? =
 Go to Settings > Maintenance after following the Installation steps.
 
 = How to change the whole Maintenance Page ? =
-If you know HTML and CSS, go to your plugins directory > easy-minimal-maintenance > maintenance-userpage.php and userpage.css.
+If you want to change the source of the client page with HTML and CSS edit the following:
+
+* easy-minimal-maintenance/public/partials/wordpress-easy-maintenance-public-display.php
+* easy-minimal-maintenance/public/css/wordpress-easy-maintenance-public-display.php
+
 
 == Changelog ==
-= 1.2.0 = 15 off April / 2020
+= 2.1.2 = 16 of July / 2020
+* Major refactoring
+* Changed appearence of both admin and user interfaces
+
+= 1.2.0 = 15 of April / 2020
 * Added to open source
 
 = 1.1.0 = 03 of September / 2017
