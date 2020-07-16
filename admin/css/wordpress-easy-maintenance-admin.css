@@ -2,3 +2,22 @@
  * All of the CSS for your admin-specific functionality should be
  * included in this file.
  */
+ 
+ .wordpress_easy_maintenance_align_input_form label {
+    display: inline-flex;
+    float: left;
+    clear: left;
+    width: 250px;
+    text-align: right;
+    margin-top: 10px;
+ }
+ 
+
+ .wordpress_easy_maintenance_align_input_form input {
+    margin-top: 10px;
+ }
+
+ .wordpress_easy_maintenance_align_input_form select {
+    margin-top: 10px;
+
+ }

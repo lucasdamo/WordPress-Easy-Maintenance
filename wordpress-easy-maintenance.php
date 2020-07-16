@@ -8,12 +8,12 @@
  * @package           Wordpress_Easy_Maintenance
  *
  * @wordpress-plugin
- * Plugin Name:		  	Wordpress Easy Maintenance
+ * Plugin Name:		  Wordpress Easy Maintenance
  * Plugin URI:
- * Description:		  	Basic plugin where you can show a different page to users not logged in. Easily to use your own template or personalize the default.
- * Author:			  		Lucas Damo <contact@lucasdamo.com>
+ * Description:		  Basic plugin where you can show a different page to users not logged in. Easily to use your own template or personalize the default.
+ * Author:			  Lucas Damo <contact@lucasdamo.com>
  * Author URI:	      https://www.lucasdamo.com/
- * Version:			  		2.1.1
+ * Version:			  2.1.2
  * License:           MIT
  * License URI:       https://choosealicense.com/licenses/mit/
  * Text Domain:       wordpress-easy-maintenance
@@ -28,7 +28,7 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * Currently plugin version.
  */
-define( 'WORDPRESS_EASY_MAINTENANCE_VERSION', '2.1.1' );
+define( 'WORDPRESS_EASY_MAINTENANCE_VERSION', '2.1.2' );
 
 /**
  * The code that runs during plugin uninstallation.
